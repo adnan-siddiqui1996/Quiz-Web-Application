@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body onload="onloadFunction()">
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">HTML5</a>
+        <a href="#">CSS3</a>
+        <a href="#">JavaScript</a>
+        <a href="#">English</a>
+        <a href="#">Science</a>
+        <a href="#">IQ</a>
+    </div>
+    <div id="main">
+        <span class="navBarIcon" onclick="openNav()">&#9776;</span>
+        <span class="quizAppHead">Quizz App</span>
+    </div>
+
+    <div class="timer hide" id="counter"></div>
+
+    <div class="home-box custom-box">
+        <h3>Instruction:</h3>
+        <p>Total number of questions: <span id="totalQues" class="total-question"></span></p>
+        <p>Each question has <b>1</b> min to answer</p>
+        <button onclick="startQuiz()" type="button" class="btn">Start Quiz</button>
+    </div>
+    
+    <div class="quiz-box custom-box hide">
+        <div class="question-number">
+
+        </div>
+        <div class="question-text">
+
+        </div>
+        <div class="option-container">
+        
+        </div>
+        <div class="next-question-btn">
+            <button onclick="next()" type="button" class="btn">Next</button>
+        </div>
+        <div class="answers-indicator">
+        </div>
+    </div>
+
+    <div class="result-box custom-box hide">
+        <h1>Quiz Result</h1>
+        <table>
+            <tr>
+                <td>Student Name</td>
+                <td><span class="student-name"></span></td>
+            </tr>
+            <tr>
+                <td>Total Question</td>
+                <td><span class="total-question"></span></td>
+            </tr>
+            <tr>
+                <td>Attempt</td>
+                <td><span class="total-attempt"></span></td>
+            </tr>
+            <tr>
+                <td>Correct</td>
+                <td><span class="total-correct"></span></td>
+            </tr>
+            <tr>
+                <td>Wrong</td>
+                <td><span class="total-wrong"></span></td>
+            </tr>
+            <tr>
+                <td>Percentage</td>
+                <td><span class="percentage"></span></td>
+            </tr>
+            <tr>
+                <td>Your Total Score</td>
+                <td><span class="total-score"></span></td>
+            </tr>
+        </table>
+        <button onclick="tryAgain()" type="button" class="btn">Try Again</button>
+        <button onclick="goToHome()" type="button" class="btn">Go To Home</button>
+    </div>
+
+
+</body>
+<script src="questions.js"></script>
+<script src="app.js"></script>
+</html>

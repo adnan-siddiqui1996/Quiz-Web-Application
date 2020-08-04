@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">HTML5</a>
+        <a href="#">CSS3</a>
+        <a href="#">JavaScript</a>
+        <a href="#">English</a>
+        <a href="#">Science</a>
+        <a href="#">IQ</a>
+    </div>
+    
+    <div id="main">
+        <span class="navBarIcon" onclick="openNav()">&#9776;</span>
+        <span class="quizAppHead">Quizz App</span>
+    </div>
+      
+    
+    <div class="mainDiv">
+        <h2 style="text-align: center;margin-top: 30px;">STUDENT DATA</h2>
+        <table>
+            <tr>
+                <td class="formSide1">Full Name</td>
+                <td><input id="name" class="formSide2" type="text" placeholder="e.g Adnan Ahmed Siddiqui"></td>
+            </tr>
+            <tr>
+                <td class="formSide1">Email ID</td>
+                <td><input id="email" class="formSide2" type="text" placeholder="e.g someone@gmail.com"></td>
+            </tr>
+            <tr>
+                <td class="formSide1">Cell No.</td>
+                <td><input id="contact" class="formSide2" type="text" placeholder="e.g 03418188157"></td>
+            </tr>
+        </table>
+        
+        <button class="takeQuizBtn" onclick="submit()">Submit</button>
+    </div>
+    
+</body>
+<script src="questions.js"></script>
+<script src="app.js"></script>
+</html>
