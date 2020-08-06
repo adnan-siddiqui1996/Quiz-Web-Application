@@ -20,7 +20,9 @@ function closeNav() {
 
 //submit Data
 var name = localStorage.getItem("name");
+var testing = localStorage.getItem('testing');
 function submit() {
+    var tda = document.getElementById('selectTest');
     var name = document.getElementById('name');
     var email = document.getElementById('email');
     var contact = document.getElementById('contact');
@@ -28,7 +30,8 @@ function submit() {
     if(name.value === "" || email.value === "" || contact.value === "") {
         alert("Please fill all the fields");
     }
-    else{
+    else{;
+        localStorage.setItem("testing", tda.value);
         localStorage.setItem("name", name.value);
         window.location.href = "questions.html";
     }
@@ -44,7 +47,20 @@ const quizBox = document.querySelector(".quiz-box");
 const resultBox = document.querySelector(".result-box");
 const timerBox = document.querySelector(".timer");
 
+var quiz;
 function onloadFunction() {
+    if(testing === "gk") {
+        quiz = gk;
+    }
+    else if(testing === "maths") {
+        quiz = maths;
+    }
+    else if(testing === "computer") {
+        quiz = computer;
+    }
+    else if(testing === "english") {
+        quiz = english;
+    }
     homeBox.querySelector(".total-question").innerHTML = quiz.length;
 }
 
