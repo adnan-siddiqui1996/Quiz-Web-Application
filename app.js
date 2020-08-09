@@ -161,7 +161,7 @@ function answersIndicator() {
     answersIndicatorContainer.innerHTML = '';
     const totalQuestion = quiz.length;
     for(var i = 0; i < totalQuestion; i++) {
-        const indicator =    document.createElement("div");
+        const indicator = document.createElement("div");
         answersIndicatorContainer.appendChild(indicator);
     }
 }
@@ -198,6 +198,21 @@ function quizResult() {
     var percentage = (correctAnswers * 100) / quiz.length;
     resultBox.querySelector(".percentage").innerHTML = percentage.toFixed(2) + "%";
     resultBox.querySelector(".total-score").innerHTML = correctAnswers + " / " + quiz.length;
+    if(percentage >= 90) {
+        resultBox.querySelector(".remarks").innerHTML = "Congratulations! You are top listed Student";
+    }
+    else if(percentage >= 80) {
+        resultBox.querySelector(".remarks").innerHTML = "Congratulations! Excellent Progress";
+    }
+    else if(percentage >= 70) {
+        resultBox.querySelector(".remarks").innerHTML = "Very Good performance! Do more hardwork to be perfect";
+    }
+    else if(percentage >= 60) {
+        resultBox.querySelector(".remarks").innerHTML = "Fair performance! You should improve yourself";
+    }
+    else {
+        resultBox.querySelector(".remarks").innerHTML = "Failed! Poor performance";
+    }
 }
 
 var resetCounter = 0;

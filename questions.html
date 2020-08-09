@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
-<body onload="onloadFunction()">
+<body onkeydown="return (event.keyCode != 116)" onload="onloadFunction()">
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -79,6 +79,10 @@
             <tr>
                 <td>Your Total Score</td>
                 <td><span class="total-score"></span></td>
+            </tr>
+            <tr>
+                <td>Remarks</td>
+                <td><span class="remarks"></span></td>
             </tr>
         </table>
         <button onclick="tryAgain()" type="button" class="btn">Try Again</button>
